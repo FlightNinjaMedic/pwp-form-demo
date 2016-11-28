@@ -1,0 +1,6 @@
+/.idea
+.DS_Store
+/vendor
+
+# ignore form mailer configuration data 
+**/php/mail-config.php

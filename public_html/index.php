@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Prata" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
 		<!-- FontAwesome -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -24,106 +24,73 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<title>Formal Form Demo - jQuery</title>
+		<title>PWP Form Demo</title>
 	</head>
 	<body class="sfooter">
 		<div class="sfooter-content">
 
 			<header>
-				<nav class="navbar navbar-fixed-top navbar-inverse">
+				<nav class="navbar navbar-inverse">
 					<div class="container">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<!--<a class="navbar-brand" href="/~rlewis37/form-demo-jquery/public_html/">Formal Form Demo (jQuery)</a>-->
-						</div>
-
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="https://bootcamp-coders.cnm.edu/class-materials/jquery-validated-captcha-form/" target="_blank">Documentation</a></li>
-								<li><a href="https://github.com/rlewis2892/form-demo-jquery" target="_blank">GitHub</a></li>
-							</ul>
-
-						</div><!-- /.navbar-collapse -->
-					</div><!-- /.container-fluid -->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="https://bootcamp-coders.cnm.edu/class-materials/jquery-validated-captcha-form/" target="_blank">Documentation</a></li>
+							<li><a href="https://github.com/rlewis2892/form-demo-jquery" target="_blank">GitHub</a></li>
+						</ul>
+					</div><!-- /.container -->
 				</nav>
 			</header>
 
-			<main>
-				<div class="container text-right welcome">
-					<p class="h3"><em>Hello there, good sir!</em></p>
-					<h1>Welcome to the Formal Form Demo for jQuery!</h1>
-				</div>
+			<main class="container">
+				<h1 class="text-right">Welcome to the Formal Form Demo for PWP!</h1>
+				<div class="form-wrap row">
+					<div class="col-sm-6 col-sm-offset-6">
 
-				<div class="container form-wrap">
-					<div class="row">
-						<div class="col-sm-6">
-
-							<!-- insert contact form-->
-							<form id="contact-form" action="php/mailer.php" method="POST" novalidate>
-								<div class="form-group">
-									<label for="name">Name</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-user"></i>
-										</div>
-										<input class="form-control" type="text" name="name" id="name" placeholder="Your Name">
+						<!-- insert contact form here -->
+						<form id="contact-form">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-user"></i>
 									</div>
+									<input class="form-control" type="text" name="name" id="name" placeholder="Your Name">
 								</div>
-								<div class="form-group">
-									<label for="email">Email</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-envelope"></i>
-										</div>
-										<input class="form-control" type="email" name="email" id="email" placeholder="Your Email">
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-envelope"></i>
 									</div>
+									<input class="form-control" type="email" name="email" id="email" placeholder="Your Email">
 								</div>
-								<div class="form-group">
-									<label for="subject">Subject</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-pencil"></i>
-										</div>
-										<input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
+							</div>
+							<div class="form-group">
+								<label for="subject">Subject</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-pencil"></i>
 									</div>
+									<input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
 								</div>
-								<div class="form-group">
-									<label for="message">Message</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-comment"></i>
-										</div>
-										<textarea name="message" rows="5" id="message" class="form-control" placeholder="Your Message (2000 charaters max)"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="message">Message</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-comment"></i>
 									</div>
-								</div>
-
-								<!-- google recapcha -->
-								<div class="g-recaptcha" data-sitekey="6LdOsykTAAAAAC5cKEWsZGV1aCGudK0IK-F7v5D6"></div>
-
-								<button class="btn btn-default" type="reset">Reset</button>
-								<button class="btn btn-info" type="submit">Submit</button>
-							</form>
-
-							<!--empty area for form error/success output-->
-							<div class="row">
-								<div class="col-xs-12">
-									<div id="output-area"></div>
+									<textarea name="message" rows="5" id="message" class="form-control" placeholder="Your Message (2000 charaters max)"></textarea>
 								</div>
 							</div>
 
-						</div>
-					</div>
-				</div>
-			</main>
+							<button class="btn btn-default" type="reset">Reset</button>
+							<button class="btn btn-info" type="submit">Submit</button>
+						</form>
 
+					</div><!-- /.col-sm-6 -->
+				</div><!-- /.row -->
+			</main>
 		</div><!--./sfooter-content-->
 
 		<footer>

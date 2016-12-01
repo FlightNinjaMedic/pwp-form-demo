@@ -57,7 +57,7 @@
 					<div class="col-sm-6 col-sm-offset-6">
 
 						<!-- insert contact form here -->
-						<form id="contact-form">
+						<form id="contact-form" method="POST" action="php/mailer.php" novalidate>
 							<div class="form-group">
 								<label for="name">Name</label>
 								<div class="input-group">
@@ -95,9 +95,19 @@
 								</div>
 							</div>
 
+							<!-- Google reCAPTCHA-->
+							<div class="g-recaptcha" data-sitekey="6Lfelg0UAAAAAN8MFvHd9PNhSIPC2wVywIhXb03x"></div>
+
 							<button class="btn btn-default" type="reset">Reset</button>
 							<button class="btn btn-info" type="submit">Submit</button>
 						</form>
+
+						<!-- message output area -->
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="output-area"></div>
+							</div>
+						</div>
 
 					</div><!-- /.col-sm-6 -->
 				</div><!-- /.row -->
